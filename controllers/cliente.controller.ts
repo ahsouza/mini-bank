@@ -14,6 +14,11 @@ export class ClienteController {
     return await this.clienteService.getClientes()
   }
 
+  async getCliente(clienteId){
+    this.logger.info('Controller: getCliente', clienteId)
+    return await this.clienteService.getCliente(clienteId)
+  }
+
   async createCliente(cliente) {
     this.logger.info('Controller: createCliente', cliente)
     let totalCliente = (await this.clienteService.getClientes()).length

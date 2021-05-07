@@ -15,6 +15,12 @@ export class ClienteRepository {
     return clientes;
   }
 
+  async getCliente(clienteId) {
+    const cliente = await ClienteModel.findById({_id: clienteId})
+    console.log('cliente:::', cliente)
+    return cliente;
+  }
+
   async createCliente(cliente) {
     let data = {}
     try {

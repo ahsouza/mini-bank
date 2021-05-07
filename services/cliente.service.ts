@@ -8,6 +8,11 @@ export class ClienteService {
   async getClientes() {
     return await this.clienteRepository.getClientes()
   }
+
+  async getCliente(clienteId) {
+    return await this.clienteRepository.getCliente(clienteId)
+  }
+
   async createCliente(cliente) {
     return await this.clienteRepository.createCliente(cliente);
   }

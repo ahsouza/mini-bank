@@ -110,6 +110,9 @@ class App {
     this.express.get('/api/clientes', (req, res) => {
       this.clienteController.getClientes().then(data => res.json(data))
     })
+    this.express.get('/api/cliente/:id', (req, res) => {
+      this.clienteController.getCliente(req.params.id).then(data => res.json(data))
+    })
     this.express.post('/api/cliente', (req, res) => {
       console.log(req.body)
       this.clienteController.createCliente(req.body.cliente).then(data => res.json(data))

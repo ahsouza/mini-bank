@@ -57,12 +57,12 @@ Ramificações (branch) ```git branch -a```
 - [main](https://github.com/ahsouza/mini-bank/tree/main)
 - [dev-frontend](https://github.com/ahsouza/mini-bank/tree/dev-frontend)
 - [dev-backend](https://github.com/ahsouza/mini-bank/tree/dev-backend)
-- [producao](https://github.com/ahsouza/mini-bank/tree/producao)
+- [production](https://github.com/ahsouza/mini-bank/tree/production)
 
 <br>
 <p>
   <div style="display: flex" align="center">
-    <img src="assets/fluxo-de-trabalho.png" width=800 height=380 title='workspace'/>
+    <img src="assets/fluxo-de-trabalho.png" width=800 height=400 title='workspace'/>
   </div>
 </p>
 <br>
@@ -114,7 +114,7 @@ Fazer [download](https://github.com/ahsouza/mini-bank/archive/mini-bank.zip) do 
 
 ## 📋 Documentação
 
-As documentações do projeto, facilita na navegação entre suas ramificações `(dev-backend)(dev-frontend)` 
+As documentações do projeto, facilita na navegação entre suas ramificações `(dev-backend)(dev-frontend) (production)` 
 
 <br>
 <br>

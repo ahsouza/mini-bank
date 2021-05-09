@@ -45,6 +45,8 @@ branch: main
 | -                        | ✔ SPA com **React.js**
 | -                        | ✔ Banco de Dados **MongoDB**                                                                      
 | -                        | ✔ Ambiente Runtime **Node.js**
+| -                        | ✔ Metodologia **SOLID**
+| -                        | ✔ Design Pattern
 | -                        | ✔ HTML/CSS + Bootstrap                               
 | -                        | ✔ Implantação com Heroku, Netlify, Cloud MongoDB & GitHub Pages                               
 
@@ -101,7 +103,7 @@ Fazer [download](https://github.com/ahsouza/mini-bank/archive/dev-frontend.zip) 
 
 <br>
 
-Fazer [download](https://github.com/ahsouza/mini-bank/archive/mini-bank.zip) do projeto backend `Express 4.17.1`
+Fazer [download](https://github.com/ahsouza/mini-bank/archive/dev-backend.zip) do projeto backend `Express 4.17.1`
 
 <br>
 

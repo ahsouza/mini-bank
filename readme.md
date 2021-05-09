@@ -19,23 +19,13 @@
     </a>
   </p>
   <div style="display: flex" align="center">
-    <img src="assets/react.png" width=50 height=50 title='react'/> <img src="assets/node.png" width=50 height=50 title='node'/> <img src="assets/mongodb.png" width=50 height=50 title='mongodb'/> <img src="assets/bootstrap.png" width=50 height=50 title='bootstrap'/> <img src="assets/html.png" width=50 height=50 title='html'/> <img src="assets/css.png" width=50 height=50 title='css'/> <img src="assets/express.png" width=50 height=50 title='express'/> <img src="assets/npm.png" width=50 height=50 title='npm'/> 
+    <img src="assets/react.png" width=50 height=50 title='react'/> <img src="assets/nodejs.png" width=50 height=50 title='node'/> <img src="assets/mongodb.png" width=50 height=50 title='mongodb'/> <img src="assets/javascript.png" width=50 height=50 title='javascript'/> <img src="assets/html.png" width=50 height=50 title='html'/> <img src="assets/css.png" width=50 height=50 title='css'/> <img src="assets/express.png" width=50 height=50 title='express'/> <img src="assets/npm.png" width=50 height=50 title='npm'/> 
   </div>
 </p>
 
 <br>
 <br>
 <br>
-
-
-
-## Workspace
-<p>
-  <div style="display: flex" align="center">
-    <img src="assets/fluxo-de-trabalho.png" width=600 height=300 title='workspace'/>
-  </div>
-</p>
-
 
 ## Estrutura de Arquivos & Pastas
 
@@ -69,6 +59,13 @@ Ramificações (branch) ```git branch -a```
 - [dev-backend](https://github.com/ahsouza/mini-bank/tree/dev-backend)
 - [producao](https://github.com/ahsouza/mini-bank/tree/producao)
 
+<br>
+<p>
+  <div style="display: flex" align="center">
+    <img src="assets/fluxo-de-trabalho.png" width=800 height=380 title='workspace'/>
+  </div>
+</p>
+<br>
 <br>
 <br>
 

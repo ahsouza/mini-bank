@@ -30,7 +30,7 @@ branch: dev-backend
 | -                        | ✔ Swagger
 | -                        | ✔ Design Patterns 
 | -                        | ✔ Banco de Dados **MongoDB**                            
-| -                        | ✔ Cloud MongoDB & Compass                                          
+| -                        | ✔ MongoDB Atlas Cluster & Compass                                          
 | -                        | ✔ Ambiente Runtime **Node.js**
 | -                        | ✔ Framework **Express.js**
 | -                        | ✔ Metodologia SOLID
@@ -46,7 +46,7 @@ branch: dev-backend
 - Altere a branch do projeto de `main` para `dev-backend` executando o comando `git checkout dev-backend` no terminal
 - Instale as dependências: `npm install` or `yarn`
 - Execute o servidor express: `npm run start` or `yarn start`
-- Acesse no browser: `http://localhost:3042`
+- Acesse no browser: `http://localhost:3042` 
 
 <br>
 
@@ -54,7 +54,11 @@ Fazer [download](https://github.com/ahsouza/mini-bank/archive/dev-backend.zip) d
 
 <br>
 
-🌐 **URL** https://mini-bank-ahsouza.herokuapp.com/
+## Swagger API
+
+Documentação da API pode ser acessado através da **url** abaixo em ambiente local:
+
+🌐 **URL** http://localhost:3042/api/docs
 
 <br>
 <br>

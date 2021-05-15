@@ -1,5 +1,5 @@
 import { StatusContaController } from "../controllers/status-conta.controller"
-jest.mock('../controllers/status.controller')
+jest.mock('../controllers/status-conta.controller')
 
 it("tem de simular listagem de status da conta", () => {
   const functionNameMock = jest.fn()

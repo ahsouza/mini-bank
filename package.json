@@ -6,7 +6,9 @@
   "scripts": {
     "start": "ts-node index.ts",
     "dev": "nodemon index.ts",
-    "test": "npx jest" 
+    "test": "npx jest --passWithNoTests --silent --noStackTrace --no-cache --runInBand",
+    "test:verbose": "npx jest --passWithNoTests --no-cache",
+    "test:unit": "npm test -- --watch --no-cache -c jest-unit-config.js"
   },
   "keywords": [
     "nodejs",
@@ -20,7 +22,7 @@
     "mongodb"
   ],
   "author": "@ahsouza Aníbal Henrique De Souza <annibalhsouza@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
     "br-validations": "^0.3.1",

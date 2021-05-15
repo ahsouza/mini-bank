@@ -23,5 +23,5 @@ it("tem de simular atualização do cliente", () => {
 
 it("tem de simular exclusão do cliente", () => {
   const functionNameMock = jest.fn()
-  jest.spyOn(ClienteController.prototype, "updateCliente").mockImplementation(functionNameMock)
+  jest.spyOn(ClienteController.prototype, "deleteCliente").mockImplementation(functionNameMock)
 })

@@ -17,7 +17,15 @@ describe('Cliente Routes', () => {
     await MongoHelper.disconnect()
   })
 
-  test('Should return 200 when valid credentials are provided', async () => {
+  test('Tem de se reconectar quando getCollection() é executado e o cliente é desconectado', async() => {
+    expect(MongoHelper.db).toBeTruthy()
+    await MongoHelper.disconnect()
+    expect(MongoHelper.db).toBeFalsy()
+    await MongoHelper.getCollection('clientes')
+    expect(MongoHelper.db).toBeTruthy()
+  })
+
+  test('Tem de retornar 200 quando as credenciais válidas são fornecidas', async() => {
     await clienteModel.insertOne({
       nome: 'valid_name',
       cpf: 'valid_cpf',

@@ -12,7 +12,7 @@ export const connect = () => {
     useNewUrlParser: true,
     useFindAndModify: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
+    useCreateIndex: true
   })
   database = Mongoose.connection;
   database.once("open", async () => {
@@ -31,4 +31,11 @@ export const disconnect = () => {
   database.once("close", async () => {
     console.log("Diconnected  to database")
   })
+}
+
+export const getCollection = (name) => {
+  if (!database) {
+    connect()
+  } 
+  return database.db.collection(name)
 }

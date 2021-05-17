@@ -1,59 +1,57 @@
-const request = require('supertest')
-const app = require('../app')
-const MongoHelper = require('../config/db.config')
+import * as request from 'supertest'
+import * as MongoHelper from "../config/db.config"
+import * as App from "../index"
 let clienteModel
 
-describe('Cliente Routes', () => {
-  beforeAll(async () => {
-    await MongoHelper.connect(process.env.MONGO_CONNECTION_STRING)
+describe('Cliente Routes',()=> {
+  beforeAll(async() => {
+    MongoHelper.connect()
     clienteModel = await MongoHelper.getCollection('clientes')
   })
 
-  beforeEach(async () => {
+  beforeEach(async() => {
     await clienteModel.deleteMany()
   })
 
-  afterAll(async () => {
-    await MongoHelper.disconnect()
+  afterAll(() => {
+    MongoHelper.disconnect()
   })
 
-  test('Tem de se reconectar quando getCollection() é executado e o cliente é desconectado', async() => {
-    expect(MongoHelper.db).toBeTruthy()
-    await MongoHelper.disconnect()
-    expect(MongoHelper.db).toBeFalsy()
-    await MongoHelper.getCollection('clientes')
-    expect(MongoHelper.db).toBeTruthy()
-  })
+  // test('Tem de se reconectar quando getCollection() é executado e o cliente é desconectado', async() => {
+  //   expect(MongoHelper).toBeTruthy()
+  //   await MongoHelper.disconnect()
+  //   expect(MongoHelper).toBeFalsy()
+  //   await MongoHelper.getCollection('clientes')
+  //   expect(MongoHelper).toBeTruthy()
+  // })
 
   test('Tem de retornar 200 quando as credenciais válidas são fornecidas', async() => {
     await clienteModel.insertOne({
       nome: 'valid_name',
-      cpf: 'valid_cpf',
+      cpf: 99999999999,
       numero_conta: 'valid_numero_conta',
-      telefone: 'valid_telefone',
+      telefone: 99999999,
       email: 'valid_email@mail.com',
-      cep: 'valid_cep',
+      cep: 99999999,
       logradouro: 'valid_logradouro',
       estado: 'valid_estado',
       cidade: 'valid_cidade',
       bairro: 'valid_bairro'
     })
-    await request(app)
+    await request(App)
       .post('/api/cliente')
-      .send({
+      .send({cliente: {
         nome: 'valid_name',
-        cpf: 'valid_cpf',
+        cpf: 99999999999,
         numero_conta: 'valid_numero_conta',
-        telefone: 'valid_telefone',
+        telefone: 99999999,
         email: 'valid_email@mail.com',
-        cep: 'valid_cep',
+        cep: 99999999,
         logradouro: 'valid_logradouro',
         estado: 'valid_estado',
         cidade: 'valid_cidade',
         bairro: 'valid_bairro'
-      })
+      }})
       .expect(200)
   })
-
-
 })

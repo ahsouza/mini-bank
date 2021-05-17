@@ -1,12 +1,12 @@
-import * as Mongoose from "mongoose";
+import * as Mongoose from "mongoose"
 require('dotenv').config()
-let database: Mongoose.Connection;
+let database: Mongoose.Connection
 
 export const connect = () => {
-  const url = process.env.MONGO_CONNECTION_STRING;
+  const url = process.env.MONGO_CONNECTION_STRING
   console.log("from connect: process.env.MONGO_CONNECTION_STRING :::",process.env.MONGO_CONNECTION_STRING)
   if (database) {
-    return;
+    return
   }
   Mongoose.connect(url, {
     useNewUrlParser: true,
@@ -14,8 +14,8 @@ export const connect = () => {
     useUnifiedTopology: true,
     useCreateIndex: true
   })
-  database = Mongoose.connection;
-  database.once("open", async () => {
+  database = Mongoose.connection
+  database.once("open", async() => {
     console.log("Connected to database")
   })
   database.on("error", () => {
@@ -25,17 +25,15 @@ export const connect = () => {
 
 export const disconnect = () => {
   if (!database) {
-    return;
+    return
   }
   Mongoose.disconnect()
-  database.once("close", async () => {
-    console.log("Diconnected  to database")
-  })
+  database.close()
 }
 
 export const getCollection = (name) => {
   if (!database) {
     connect()
-  } 
-  return database.db.collection(name)
+  }
+  return database.collection(name)
 }

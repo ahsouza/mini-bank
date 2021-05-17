@@ -16,7 +16,7 @@
     "test": "npx jest --colors --passWithNoTests --silent --noStackTrace --no-cache --runInBand",
     "test:unit": "npm test -- --watch --no-cache -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
-    "test:verbose": "npx jest --passWithNoTests --no-cache",
+    "test:verbose": "npx jest --passWithNoTests --no-cache --detectOpenHandles",
     "test:staged": "npm test -- --findRelatedTests --silent",
     "test:ci": "npm test -- --coverage --silent",
     "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info"

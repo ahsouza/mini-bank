@@ -15,10 +15,9 @@ tmp
 package-lock.json
 # Build
 public/css/main.css
-
+domain/*
 # Coverage reports
 coverage
-
 # API keys and secrets
 .env
 

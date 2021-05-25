@@ -1,0 +1,32 @@
+{
+  "name": "mini-bank",
+  "version": "1.0.0",
+  "description": "Clean Architecture API",
+  "scripts": {
+    "start": "node dist/main/server.js",
+    "debug": "nodemon -L --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/main/server.js",
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "check": "npm-check -s -u"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsouza/mini-bank.git"
+  },
+  "keywords": [
+    "typescript",
+    "express",
+    "node",
+    "design-patterns",
+    "clean-code",
+    "tdd-jest",
+    "solid",
+    "mongodb",
+    "sql"
+  ],
+  "author": "@ahsouza Aníbal Henrique De Souza <annibalhsouza@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahsouza/mini-bank/issues"
+  },
+  "homepage": "https://github.com/ahsouza/mini-bank#readme"
+}

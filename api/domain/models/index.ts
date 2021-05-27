@@ -1,6 +1,7 @@
-  
 export * from './extract'
 export * from './client'
+export * from './file'
+export * from './uploaded-file'
 export * from './institution'
 export * from './transaction-type'
 export * from './account'

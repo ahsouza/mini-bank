@@ -7,3 +7,4 @@ data
 .vscode
 globalConfig.json
 package-lock.json
+**/env.ts

@@ -4,13 +4,14 @@ import { File, UploadedFile } from '@/domain/models'
 import configS3 from '@/main/config/env'
 
 export class AWSFileUploader implements FileUploader {
-  private client: S3
+  private readonly client: S3
   private readonly bucketName = configS3.bucketName
   constructor() {
     this.client = new S3({
       region: configS3.defaultRegion,
     })
   }
+
   private generateFileKey(file: File, timestamp: number): string {
     return `${file.name}-${timestamp}.${file.extension}`
   }

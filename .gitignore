@@ -1,0 +1,9 @@
+node_modules
+dist
+coverage
+!src/data
+!tests/data
+.vscode
+globalConfig.json
+package-lock.json
+**/env.ts
